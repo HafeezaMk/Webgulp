@@ -1,0 +1,412 @@
+body{
+	 font-family: 'Merienda';
+   
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+.nav-item{
+	padding-right: 10px;
+	padding-left: 10px;
+    font-size: 13px;
+}
+
+.bg-light {
+    background-color:#f3f8fa!important;
+}
+.nav-link {
+   color:  black!important; 
+}
+
+.nav-link.active{
+	background-color: lightgrey !important;
+}
+/*.dropdown:hover>.dropdown-menu{
+    display:block;
+}*/
+
+
+
+.navMenu{
+	padding-top: 75px;
+	padding-bottom: 20px;
+}
+
+/*main page*/
+*
+{
+  -webkit-transition: 1.5s all;
+  -o-transition: 1.5s all;
+  transition: 1.5s all;
+}
+
+
+.custom-slider
+{
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+ .custom-slide::before 
+{
+      content: '';
+      background-color: black;
+	opacity: .5;
+	z-index: -1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+  background-attachment: fixed;/*parallex effect*/
+}
+
+.custom-slide
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  -webkit-transform:  scale(2,2);
+  -ms-transform:  scale(2,2);
+  transform:  scale(2,2);
+  opacity: 0;
+}
+
+.custom-caption
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color:#fff;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1) !important;
+}
+
+.custom-slide.active-slide
+{
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 20
+}
+.custom-caption h1
+{
+font-family: 'Merienda';
+  opacity: 0;
+  -webkit-transform: scale(0,0);
+  -ms-transform: scale(0,0);
+  transform: scale(0,0);
+  -webkit-transition: .5s all;
+   -o-transition: .5s all;
+   transition: .5s all;
+   transition-delay: 1s;
+    font-size: 40px;
+}
+
+.active-slide .custom-caption h1
+{
+    font-family: 'Merienda';
+  -webkit-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  transform: scale(1,1);
+  opacity: 1;
+}
+
+
+@media screen and (max-width : 850px){
+   .custom-slider {
+        height: 60vh;
+    }
+    .custom-caption h1{
+         font-size: 100%;
+    }
+}
+@import "compass/css3";
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+	-moz-animation: #{$animation};
+	-ms-animation: #{$animation};
+	animation: #{$animation};
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@include keyframes(bounce) {
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-20px));
+  }
+	60% {
+    @include transform(translateY(-10px));
+  }
+}
+
+
+
+
+/*scroll to down arrow*/
+.circle
+{
+    position: absolute;
+    top: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 40px;
+    text-align: center;
+    text-align: 110px;
+    font-size: 40px;
+    overflow: hidden;
+    margin-top: 60px;
+   
+   
+}
+.fa-angle-down{
+    color: #68A4C4;
+}
+@keyframes animate
+{
+    0%{
+        transform: translateY(-50px);
+        text-shadow: 0 50px 0 #fff;
+    } 
+    20%{
+        transform: translateY(0px);
+         text-shadow: 0 10px 0 #fff;
+    } 
+    
+    40%{
+        transform: translateY(0px);
+         text-shadow: 0 -10px 0 #fff;
+    } 
+
+    60%{
+        transform: translateY(0px);
+         text-shadow: 0 0px 0 #fff;
+    } 
+    
+    100%{
+        transform: translateY(100px);
+         text-shadow: 0 -50px 0 #fff;
+    } 
+    
+}
+
+
+/*faq section */
+h2 {
+   font-family: 'merienda';
+   
+    font-size: 2em;
+    color: #091f2f;
+    padding-top: 3%;
+    text-align: center;
+    padding-bottom: 3%;
+    
+    
+}
+.accordion-section .panel-default > .panel-heading {
+    border: 0;
+    background: #f3f8fa;
+    padding: 0;
+}
+.accordion-section .panel-default .panel-title a {
+    display: block;
+   font-family: 'merienda';
+    font-size: 1.1rem;
+     color: #091f2f;
+}
+.accordion-section .panel-default .panel-title a:after {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-size: 1.5rem;
+    content: "\f106";
+    color: black;
+    float: right;
+    margin-top: -12px;
+    margin-right: -12.5px;
+}
+.accordion-section .panel-default .panel-title a.collapsed:after {
+    content: "\f107";
+}
+.accordion-section .panel-default .panel-body {
+    font-size: 1rem;
+    font-family: serif;
+     color: black;
+}
+
+/*return to top*/
+.fa-arrow-circle-up{
+   font-size: 30px;
+    color: #68A4C4;
+}
+.fa-angle-up p{
+    font-family: serif;
+}
+
+
+/*footer*/
+.footer-distributed {
+  background-color: #f3f8fa;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+ border: .5px solid #8f9296;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 15px 40px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 12px;
+  margin: 0;
+    font-family: serif;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+    font-family: 'merienda';
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+    
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: black;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  
+  font-size: 25px;
+  color: #68A4C4;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 3px;
+  transition:all .25s;
+    
+    
+}
+
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:white;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
+
+
