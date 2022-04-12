@@ -1,0 +1,134 @@
+
+html
+{
+        height: 100%;
+
+}
+body
+{
+        background-image: url(../images/coming.jpg);
+    
+        background-size: cover;
+        background-position: center;/*makes image to responsive*/
+     
+   
+}
+
+body::before 
+{
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.center
+{
+        text-align: center;
+        padding-top: 10%;
+   
+}
+p 
+{
+        font-size: 25px;
+        font-family: poppins;
+        color:black;
+        font-weight: 600;
+}
+p1
+{
+        font-size:20px;
+        font-family: poppins;
+        color:black;
+        font-weight: 600;
+}
+
+h1
+{
+        font-size: 50px;
+        font-family: 'Grenze', serif;
+        color:black;
+        font-weight: bold;
+}
+
+h1::after
+{
+        content:'';
+        background: black;
+        display: block;
+        height: 2px;
+        width: 250px;
+        margin: 10px auto 5px;
+   
+}
+
+/*hourglass spinner*/
+.hourglass-spin > [class*="fa-hourglass"] 
+{
+        animation: showhide 4s steps(1) infinite;
+        opacity: 0;
+        color: white;
+   
+}
+.hourglass-spin > .fa-hourglass-end 
+{
+      animation-delay: 2s;
+}
+.hourglass-spin > .fa-hourglass-half
+{
+      animation-delay: 1s;
+}
+.hourglass-spin > .fa-hourglass-start 
+{
+      animation-delay: 0s;
+}
+.hourglass-spin > .fa-hourglass-end.spin 
+{
+      animation: showhidespin 4s linear infinite;
+}
+
+@keyframes showhide 
+{
+  0% {
+        opacity: 1;
+      }
+  25% {
+        opacity: 0;
+      }
+}
+@keyframes showhidespin
+{
+  0% {
+        opacity: 0;
+     }
+  74.9999999% {
+        opacity: 0;
+      }
+  75% {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+  100% {
+        opacity: 1;
+        transform: rotate(180deg);
+      
+      }
+}
+
+
+
+@media (max-width:768px) 
+{
+    
+    body
+    {
+        background-image: url(../images/coming.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
